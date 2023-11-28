@@ -32,7 +32,8 @@ app.get('/webhooks', (req, res) => {
 app.post('/webhooks', (req, res) => {
     let body_param = req.body
     console.log("webhooks post ");
-    console.log(JSON.stringify(body_param, null, 2))
+    console.log(req)
+    
 
     if (body_param.object) {
         if (body_param.entry &&
