@@ -43,8 +43,8 @@ app.listen(8000 || process.env.PORT, () => {
 });
 
 
-app.use(body_parser.json({ verify: verifyRequestSignature }))
-
+app.use(body_parser.json())
+//{ verify: verifyRequestSignature }
 // Add an error-handling Express middleware function 
 // to prevent returning sensitive information.
 app.use(abortOnError);
