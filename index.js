@@ -16,6 +16,7 @@ app.listen(8000||process.env.PORT, () => {
 });
 
 app.get('/webhooks', (req, res) => {
+    console.log("webhooks get ");
     let mode = req.query['hub.mode']
     let verify_token = req.query['hub.verify_token']
     let challenge = req.query['hub.challenge']
@@ -30,7 +31,7 @@ app.get('/webhooks', (req, res) => {
 })
 app.post('/webhooks', (req, res) => {
     let body_param = req.body
-
+    console.log("webhooks post ");
     console.log(JSON.stringify(body_param, null, 2))
 
     if (body_param.object) {
