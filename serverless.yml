@@ -1,0 +1,20 @@
+service: whatsapp-webhooks
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  environment:
+    TOKEN: ${env:APP_TOKEN}
+
+plugins: 
+  - serverless-offline	
+
+functions:
+  app:
+    handler: handler.handler
+    events:
+      - http: ANY /
+      - http: 'ANY /{proxy+}'
+

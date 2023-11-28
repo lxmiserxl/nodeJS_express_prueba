@@ -1,0 +1,20 @@
+{
+  "name": "webhookws_1",
+  "version": "1.0.0",
+  "description": "prueba de webhooks https://business.whatsapp.com/blog/how-to-use-webhooks-from-whatsapp-business-api?lang=es_LA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "emirandas",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "serverless-http": "^3.2.0",
+    "serverless-offline": "^13.3.0"
+  }
+}
